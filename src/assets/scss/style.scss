@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+//---------- import ----------
+//グローバル（変数・mixin）
+@use "global";
+
+//ベース（リセット・ベースのスタイル）
+@use "foundation/reset";
+@use "foundation/base";
+
+//レイアウト（ページ全体の大枠レイアウト用のスタイル）
+@use "layout/wrap";
+
+//コンポーネント（再利用可能で最小パーツ用のスタイル）
+//@use "component/title";
+
+//オブジェクト（再利用可能でページ内のブロック（パーツの集合体）またはcomponentが結合したスタイル）
+@use "object/header";
+@use "object/footer";
+
+//ページ（component/blockに該当しないページ独自のスタイル）
+@use "page/top";
+
+//ユーティリティ（汎用・状態変化・JS・プラグイン用のスタイル）
+@use "utility/margin";
+@use "utility/padding";
+@use "utility/display";
+@use "utility/flex";
+@use "utility/align";
+@use "utility/script";
+@use "utility/plugin";

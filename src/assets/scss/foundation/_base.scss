@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+//---------- import ----------
+@use "../global" as *;
+
+/*--------------- base ---------------*/
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Noto Sans JP', '游ゴシック', 'YuGothic', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', 'Osaka', 'Arial', sans-serif;
+  font-size: 1.0rem;
+  font-feature-settings: "palt";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  line-height: 1;
+  line-break: strict;
+  color: $text-color;
+  background-color: $white;
+  -webkit-text-size-adjust: 100%;
+  word-wrap : break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+a {
+  display: block;
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: $hover-color;
+  }
+}
+img {
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+}
+//safariのみ
+_::-webkit-full-page-media, _:future, :root img {
+  image-rendering: auto;
+}
